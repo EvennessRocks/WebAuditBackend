@@ -30,6 +30,8 @@ exports.summarizeResults = async (results) => {
     ${passDescriptions}
 
     Please provide a concise summary that highlights both areas for improvement and commendable practices, focusing on what the website owners should prioritize fixing and what they're doing well to support accessibility.
+    Also closely look at the tags and only analyze those that have wcag in them. Only mention wcag in the summary if possible, no other ones.
+    Also don't say that an audit was provided to you. Just give me a summary back.
   `;
 
   const response = await openai.chat.completions.create({
